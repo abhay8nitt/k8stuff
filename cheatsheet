@@ -1,0 +1,11 @@
+kubectl cluster-info
+kubectl get pods
+kubectl get namespace
+kubectl config set-context --current --namespace=<namespace>
+kubectl exec -it <pod> /bin/sh
+kubectl scale deployment <name>-deployment --replicas=0 -n <namespace>
+kubectl port-forward pod/<pod-name> port:port -namespace <namespace>
+kubectl get secret <secret name> -o yaml
+kubectl logs custom-proxy-deployment -c init-proxy
+kubectl cp <file> namespace/podname:/root
+kubectl rollout restart deployment.v1.apps/proxy-deployment
