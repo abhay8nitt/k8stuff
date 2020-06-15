@@ -9,3 +9,5 @@ kubectl get secret <secret name> -o yaml
 kubectl logs custom-proxy-deployment -c init-proxy
 kubectl cp <file> namespace/podname:/root
 kubectl rollout restart deployment.v1.apps/proxy-deployment
+kubectl -n spinnaker get events --sort-by='{.lastTimestamp}'
+     https://github.com/helm/charts/issues/11904#issuecomment-489249245
